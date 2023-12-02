@@ -1,3 +1,4 @@
+#pragma once
 #include "passenger.h"
 #include "station.h"
 
@@ -33,13 +34,7 @@ class MBus : public BUS
 public:
     // constructor
     MBus(int bus_capacity, int seconds_to_ride,
-         int trips_before_maintanance, int maintanance_duration)
-    {
-        setBusCapacity(bus_capacity);
-        setSecondsToRide(seconds_to_ride);
-        setTripsBeforeMaintanance(trips_before_maintanance);
-        setMaintananceDuration(maintanance_duration);
-    }
+         int trips_before_maintanance, int maintanance_duration);
     // methods
     void addPassenger(Passenger passenger);
     void removePassenger(Passenger passenger);
@@ -50,13 +45,7 @@ class WBus : public BUS
 public:
     // constructor
     WBus(int bus_capacity, int seconds_to_ride,
-         int trips_before_maintanance, int maintanance_duration)
-    {
-        setBusCapacity(bus_capacity);
-        setSecondsToRide(seconds_to_ride);
-        setTripsBeforeMaintanance(trips_before_maintanance);
-        setMaintananceDuration(maintanance_duration);
-    }
+         int trips_before_maintanance, int maintanance_duration);
     // methods
     void addPassenger(Passenger passenger);
     void removePassenger(Passenger passenger);
