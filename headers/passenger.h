@@ -23,7 +23,7 @@ public:
     int getStartStation();
     int getEndStation();
     int getCurrentWaitTime();
-    PassengerType getType();
+    PassengerType getType()const;
 
     // methods
 
