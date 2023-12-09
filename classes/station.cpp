@@ -33,6 +33,3 @@ void station::EnterWheelPassengerQueue(const Passenger& passenger)
         WheelPassengerQueue.enqueue(passenger);
     }
 }
-
-
-
