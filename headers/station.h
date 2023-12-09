@@ -2,28 +2,24 @@
 #include <iostream>
 #include "bus.h"
 #include "passenger.h" 
-#include <queue>
 #include <string.h>
-using namespace std;
+#include "queues.h"
 class station
 {
 
 private:
-
-    queue<WBus> WheelChairQueue;
-    queue<MBus> MixedBusQueue;
-    queue<Passenger> PassengerQueue;
+    Queue<Passenger> MixedPassengerQueue;
+    Queue<BUS> WheelBusQueue;
+    Queue<BUS> MixedBusQueue;
+    Queue<Passenger> WheelPassengerQueue;
+    Queue<Passenger> SpecialPassengerQueue;
     
 public:
-
+    station();
     void EnterPassengerQueue(const Passenger& passenger);
     void AddWheelChairQueue(const WBus& bus);
     void AddMixedChairQueue(const MBus& bus);
     void AssignPassengerToBus();
-
-
-
-
 
 };
 

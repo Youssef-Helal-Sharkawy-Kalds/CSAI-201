@@ -1,22 +1,38 @@
 #include "headers/station.h"
 
-void station::EnterPassengerQueue(const Passenger& passenger)
-{
-    PassengerQueue.push(passenger);
+station::station():MixedPassengerQueue(1000),WheelBusQueue(1000),MixedBusQueue(1000),WheelPassengerQueue(1000),SpecialPassengerQueue(1000){};
 
+void station::EnterMixedPassengerQueue(const Passenger& passenger)
+{
+    if(passenger.getType()==PassengerType::NP)
+    {
+        MixedPassengerQueue.enqueue(passenger);
+    }
 };
 
-void station::AddWheelChairQueue(const WBus& bus)
+void station::AddWheelBusQueue(const WBus& bus)
 {
-    WheelChairBusQueue.push(bus);
-    
+    WheelBusQueue.enqueue(bus);
 };
 
-void station::AddMixedChairQueue(const MBus& bus)
+void station::AddMixedBusQueue(const MBus& bus)
 {
-    MixedBusQueue.push(bus);
+    MixedBusQueue.enqueue(bus);
 };
-
+void station::EnterSpecialPassengerQueue(const Passenger& passenger)
+{
+    if (passenger.getType()==PassengerType::Aged  || passenger.getType()==PassengerType::POD || passenger.getType()==PassengerType::Pregenant)
+    {
+        SpecialPassengerQueue.enqueue(passenger);
+    }
+}
+void station::EnterWheelPassengerQueue(const Passenger& passenger)
+{
+    if (passenger.getType()==PassengerType::WP)
+    {
+        WheelPassengerQueue.enqueue(passenger);
+    }
+}
 
 
 
