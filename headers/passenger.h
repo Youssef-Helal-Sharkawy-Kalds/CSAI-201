@@ -13,13 +13,13 @@ class Passenger
 {
 public:
     // constructor
-    Passenger(char *id, int start_station, int end_station, PassengerType type);
+    Passenger(int id, int start_station, int end_station, PassengerType type);
     Passenger();
     // setters
     void setCurrentWaitTime(int current_wait_time);
 
     // getters
-    char *getId();
+    int getId();
     int getStartStation();
     int getEndStation();
     int getCurrentWaitTime();
@@ -28,7 +28,7 @@ public:
     // methods
 
 private:
-    char *id = new char[1000];
+    int id;
     int start_station;
     int end_station;
     int current_wait_time;

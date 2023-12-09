@@ -6,7 +6,7 @@ void Passenger::setCurrentWaitTime(int current_wait_time)
     this->current_wait_time = current_wait_time;
 }
 // getters
-char *Passenger::getId()
+int Passenger::getId()
 {
     return id;
 }
@@ -27,7 +27,7 @@ PassengerType Passenger::getType()
     return type;
 }
 // constructors
-Passenger::Passenger(char *id, int start_station, int end_station, PassengerType type)
+Passenger::Passenger(int id, int start_station, int end_station, PassengerType type)
 {
     this->id = id;
     this->start_station = start_station;
