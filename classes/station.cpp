@@ -2,7 +2,7 @@
 
 station::station():MixedPassengerQueue(1000),WheelBusQueue(1000),MixedBusQueue(1000),WheelPassengerQueue(1000),SpecialPassengerQueue(1000){};
 
-void station::EnterMixedPassengerQueue(const Passenger& passenger)
+void station::EnterNormalBusQueue(const Passenger& passenger)
 {
     if(passenger.getType()==PassengerType::NP)
     {

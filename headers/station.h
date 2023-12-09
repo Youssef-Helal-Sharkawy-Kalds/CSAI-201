@@ -8,6 +8,7 @@ class station
 {
 
 private:
+
     Queue<Passenger> MixedPassengerQueue;
     Queue<BUS> WheelBusQueue;
     Queue<BUS> MixedBusQueue;
@@ -15,12 +16,15 @@ private:
     Queue<Passenger> SpecialPassengerQueue;
     
 public:
-    station();
-    void EnterPassengerQueue(const Passenger& passenger);
-    void AddWheelChairQueue(const WBus& bus);
-    void AddMixedChairQueue(const MBus& bus);
-    void AssignPassengerToBus();
 
+    station();
+    void EnterNormalBusQueue(const Passenger& passenger);
+    void EnterWheelPassengerQueue(const Passenger& passenger);
+    void EnterSpecialPassengerQueue(const Passenger& passenger);
+    void AddWheelBusQueue(const WBus& bus);
+    void AddMixedBusQueue(const MBus& bus);
+    void AssignPassengerToBus();
+    
 };
 
     

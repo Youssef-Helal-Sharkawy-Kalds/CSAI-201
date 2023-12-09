@@ -22,7 +22,7 @@ int Passenger::getCurrentWaitTime()
 {
     return current_wait_time;
 }
-PassengerType Passenger::getType()
+PassengerType Passenger::getType()const
 {
     return type;
 }
